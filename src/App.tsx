@@ -9,7 +9,7 @@ export default function App() {
 
   return (
     <main className="relative w-full min-h-screen flex items-start md:items-center justify-center px-4 py-10 bg-white">
-      <div className="w-full relative flex items-start justify-center">
+      <div className="w-full relative flex items-start justify-start sm:justify-center">
         <div className="flex items-center justify-center relative gap-4">
           <motion.div
             className="absolute left-0 bg-white w-full rounded-[40px] z-10"
@@ -19,7 +19,7 @@ export default function App() {
             transition={{ type: "ease-in", duration: 0.5 }}
           >
             <motion.button
-              className="size-20 rounded-full flex items-center justify-center bg-zinc-400"
+              className="size-12 sm:size-20 rounded-full flex items-center justify-center bg-zinc-400"
               onClick={() => setActive(!active)}
               animate={{ rotate: active ? 45 : 0 }}
               transition={{
@@ -35,7 +35,7 @@ export default function App() {
               key={index}
               src={src}
               alt={`Image ${index + 1}`}
-              className="rounded-full size-16"
+              className="rounded-full size-10 sm:size-16"
               animate={{
                 filter: active ? "blur(0px)" : "blur(2px)",
                 scale: active ? 1 : 0.9,
